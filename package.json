@@ -4,13 +4,17 @@
   "description": "An esy-buildable version of libcurl (for Windows)",
   "esy": {
     "build": [
-      "bash",
-      "./esy/build.sh"
+      [
+        "bash",
+        "./esy/build.sh"
+      ]
     ],
     "install": [
-      "bash",
-      "./esy/install.sh",
-      "#{os}"
+      [
+        "bash",
+        "./esy/install.sh",
+        "#{os}"
+      ]
     ],
     "exportedEnv": {
       "CURL_INCLUDE_PATH": {
