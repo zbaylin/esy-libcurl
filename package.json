@@ -1,0 +1,26 @@
+{
+  "name": "esy-libcurl",
+  "version": "7.76.1",
+  "description": "An esy-buildable version of libcurl (for Windows)",
+  "esy": {
+    "build": [
+      "bash",
+      "./esy/build.sh"
+    ],
+    "install": [
+      "bash",
+      "./esy/install.sh",
+      "${os}"
+    ],
+    "exportedEnv": {
+      "CURL_INCLUDE_PATH": {
+        "val": "#{self.install / 'include'}",
+        "scope": "global"
+      },
+      "CURL_LIB_PATH": {
+        "val": "#{self.lib}",
+        "scope": "global"
+      }
+    }
+  }
+}
