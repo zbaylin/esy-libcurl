@@ -10,7 +10,7 @@
     "install": [
       "bash",
       "./esy/install.sh",
-      "${os}"
+      "#{os}"
     ],
     "exportedEnv": {
       "CURL_INCLUDE_PATH": {
